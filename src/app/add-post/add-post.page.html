@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Agregar 👍</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Título</ion-label>
+    <ion-input type="text" required [(ngModel)]="post.title" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Detalles</ion-label>
+    <ion-input type="text" required [(ngModel)]="post.details" ></ion-input>
+  </ion-item>
+
+  <ion-button class="ion-padding" color="primary" expand="full" (click)="createPost(post)">Crear</ion-button>
+
+</ion-content>

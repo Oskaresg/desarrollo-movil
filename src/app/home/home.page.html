@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title>
+    App T de A 📚
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-fab vertical="botton" horizontal="end" slot="fixed">
+    <ion-fab-button [routerLink]="['/add-post']">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list lines="none">
+    <ion-item-sliding *ngFor="let post of posts">
+      <ion-item class="no-padding">
+        <ion-label>
+          <h2>{{post.title}}</h2>
+          <p>{{post.details}}</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item-options side="start">
+        <ion-item-option [routerLink]="['/edit-page/', post.id]">
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>          
+        </ion-item-option>
+      </ion-item-options>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="deletePost(post.id)">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>          
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    
+  </ion-list>
+
+  <div id="container">
+    <strong>Estoy listo para ser el mejor desarrollador movil con Ionic en el TdeA </strong>
+    <p>Página de mi Universidad el Tdea📚 <a target="_blank" rel="noopener noreferrer" href="https://www.tdea.edu.co/">Tecnologico de antioquia</a></p>
+    <p>Click en la pagina de mi profesor 😎 <a target="_blank" rel="noopener noreferrer" href="https://dfamsoluciones.com/">Profe de mobile</a></p>
+    <p>Primeros pasos con Ionic 👨‍💻 <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">Componentes</a></p>
+  </div>
+</ion-content>

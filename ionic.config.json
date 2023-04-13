@@ -1,0 +1,7 @@
+{
+  "name": "ionic-crud-tdea",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

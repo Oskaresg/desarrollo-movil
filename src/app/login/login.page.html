@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Login T de A 🧐</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-item>
+    <ion-label position="floating">Correo Institucional</ion-label>
+    <ion-input type="email" required [(ngModel)]="user.email" ></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" required [(ngModel)]="user.password" ></ion-input>
+  </ion-item>
+
+  <ion-button class="ion-padding" color="success" (click)="login(user)">Ingresar</ion-button>
+
+  <ion-button class="ion-padding" color="warning" [routerLink]="['/register']">Registrarse</ion-button>
+</ion-content>

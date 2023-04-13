@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="success">
+  <ion-toolbar color="warning">
     <ion-title>Registrese aquí</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,10 +11,10 @@
   </ion-item>
 
   <ion-item>
-    <ion-label position="floating">Ingrese Una contraseña</ion-label>
+    <ion-label position="floating">Ingrese Un password</ion-label>
     <ion-input type="password" [(ngModel)]="user.password" required></ion-input>
   </ion-item>
 
-  <ion-button class="ion-padding" color="primary" expand="full" (click)="register(user)">Desea Registrarse</ion-button>
+  <ion-button class="ion-padding" color="warning" expand="full" (click)="register(user)">Desea Registrarse</ion-button>
   
 </ion-content>
